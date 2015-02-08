@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="VP5pZN" name="GCHQ" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.hogliux.GCHQ" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="0" buildAU="0" buildRTAS="0" buildAAX="0"
+              pluginName="GCHQ" pluginDesc="GCHQ" pluginManufacturer="hogliux"
+              pluginManufacturerCode="hglx" pluginCode="GCHQ" pluginChannelConfigs="{1, 1}, {2, 2}"
+              pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
+              pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="GCHQAU" pluginRTASCategory="" aaxIdentifier="com.hogliux.GCHQ"
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="3.1.1">
+  <MAINGROUP id="dXZcxZ" name="GCHQ">
+    <GROUP id="{F28CD00E-0EBD-C9C0-8A6F-9F860F33D143}" name="Source">
+      <FILE id="n3CfVR" name="GCHQEditor.cpp" compile="1" resource="0" file="Source/GCHQEditor.cpp"/>
+      <FILE id="nRgBEe" name="GCHQEditor.h" compile="0" resource="0" file="Source/GCHQEditor.h"/>
+      <FILE id="hWYV4J" name="FIRCoeffecients.h" compile="0" resource="0"
+            file="Source/FIRCoeffecients.h"/>
+      <FILE id="hyVzS3" name="FIRCoeffecients.cpp" compile="1" resource="0"
+            file="Source/FIRCoeffecients.cpp"/>
+      <FILE id="UUz33q" name="FIRFilter.cpp" compile="1" resource="0" file="Source/FIRFilter.cpp"/>
+      <FILE id="PTrCFo" name="FIRFilter.h" compile="0" resource="0" file="Source/FIRFilter.h"/>
+      <FILE id="VJ7g1M" name="GCHQKernel.cpp" compile="1" resource="0" file="Source/GCHQKernel.cpp"/>
+      <FILE id="CJiwlB" name="GCHQKernel.h" compile="0" resource="0" file="Source/GCHQKernel.h"/>
+      <FILE id="OdZlfA" name="FFTW.cpp" compile="1" resource="0" file="Source/FFTW.cpp"/>
+      <FILE id="GXClPG" name="FFTW.h" compile="0" resource="0" file="Source/FFTW.h"/>
+      <FILE id="bSXjvK" name="GCHQAudioProcessor.cpp" compile="1" resource="0"
+            file="Source/GCHQAudioProcessor.cpp"/>
+      <FILE id="cTulIV" name="GCHQAudioProcessor.h" compile="0" resource="0"
+            file="Source/GCHQAudioProcessor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <LINUX_MAKE targetFolder="Builds/Linux" vstFolder="~/SDKs/vstsdk2.4" extraLinkerFlags="-Wl,--no-undefined"
+                extraCompilerFlags="-Wall" externalLibraries="fftw3f">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
+                       targetName="GCHQ"/>
+        <CONFIGURATION name="Release" libraryPath="/usr/X11R6/lib/" isDebug="0" optimisation="2"
+                       targetName="GCHQ"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
