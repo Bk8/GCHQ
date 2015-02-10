@@ -5,6 +5,11 @@ GCHQ is a high-quality impulse response filter which uses impulse response data 
 
 GCHQ was programmed in roughly one day as part of a job application and therefore there are several **limitations** (see Limitations).
 
+Downloads
+=========
+
+See the project homepage http://hogliux.github.com/GCHQ for Windows, Mac OS X and Linux binary downloads.
+
 Building
 ========
 
