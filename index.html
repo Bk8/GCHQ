@@ -34,6 +34,14 @@
 <p><em>GCHQ is a free, high-quality reverb built with the <a href="http://www.juce.com">JUCE libraries</a></em></p>
 
 <p><em>GCHQ</em> is a convolution reverb which uses impulse response data from various famous landmarks found on the OpenAir project (<a href="http://www.openairlib.net/">http://www.openairlib.net/</a>).</p>
+<h2>Limitations</h2>
+<p><ul class="task-list">
+<li>GCHQ currently does not report the correct latency when the reverb program is changed during playback. You will need to reload GCHQ or restart the audio engine for correct latency compensation everytime the reverb program is changed</li>
+<li>The user interface looks like a design accident from the 90s...</li>
+<li>There are several potential optimizations in the impulse response code that haven't been implemented yet</li>
+<li>Currently, the impulse responses are mono only</li>
+<li>I still don't know what GCHQ actually stands for :-). Any suggestions?</li>
+</ul></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/hogliux">hogliux</a></p>
